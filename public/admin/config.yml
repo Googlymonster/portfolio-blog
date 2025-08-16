@@ -1,8 +1,7 @@
 backend:
   # Use the Git Gateway backend for authentication via Netlify Identity.  The
   # branch setting determines which branch content updates will be committed to.
-  name: github
-  repo: Googlymonster/portfolio-blog
+  name: git-gateway
   branch: main
 
 local_backend: true
