@@ -13,7 +13,7 @@ import type { PostMeta } from './posts';
 
 const SPACE_ID = process.env.CONTENTFUL_SPACE_ID;
 const ACCESS_TOKEN = process.env.CONTENTFUL_ACCESS_TOKEN;
-const ENVIRONMENT = process.env.CONTENTFUL_ENVIRONMENT || 'master';
+const ENVIRONMENT = process.env.CONTENTFUL_ENVIRONMENT;
 
 if (!SPACE_ID || !ACCESS_TOKEN) {
   throw new Error('Contentful space ID and access token must be set in environment variables');
