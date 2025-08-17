@@ -28,7 +28,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             >
               <Box
                 component="img"
-                src="/images/logo.png"
+                src="/images/logo.jpg"
                 alt="Logo"
                 sx={{ height: 32, width: 32, mr: 1 }}
               />
