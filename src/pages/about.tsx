@@ -1,6 +1,17 @@
+// src/pages/about.tsx
 import React from 'react';
-import { Typography, Box } from '@mui/material';
 import Layout from '../components/Layout';
+import Image from 'next/image';
+import {
+  Typography,
+  Box,
+  Stack,
+  Link,
+  IconButton,
+  Card,
+  CardContent,
+} from '@mui/material';
+import { Email, GitHub, LinkedIn } from '@mui/icons-material';
 
 /**
  * The About page provides a space to introduce yourself and explain the purpose
@@ -35,6 +46,75 @@ export default function About() {
         <Typography variant="body1" paragraph>
           Let's build something amazing together.
         </Typography>
+      </Box>
+
+      {/* Profile picture */}
+      <Box mt={6} display="flex" justifyContent="center">
+        <Image
+          src="/profile.jpg" // put your file in /public/profile.jpg
+          alt="Kevin Nguyen"
+          width={200}
+          height={200}
+          style={{ borderRadius: '50%', objectFit: 'cover' }}
+          priority
+        />
+      </Box>
+
+      {/* Contact card */}
+      <Box mt={4} display="flex" justifyContent="center">
+        <Card sx={{ maxWidth: 600, width: '100%' }}>
+          <CardContent>
+            <Typography variant="h5" align="center" gutterBottom>
+              Contact Me
+            </Typography>
+
+            <Stack direction="row" spacing={3} justifyContent="center" sx={{ mb: 1 }}>
+              <IconButton
+                component={Link}
+                href="mailto:kdnguyen9088@gmail.com"
+                aria-label="Email"
+              >
+                <Email fontSize="large" />
+              </IconButton>
+              <IconButton
+                component={Link}
+                href="https://github.com/Googlymonster"
+                target="_blank"
+                rel="noopener"
+                aria-label="GitHub"
+              >
+                <GitHub fontSize="large" />
+              </IconButton>
+              <IconButton
+                component={Link}
+                href="https://www.linkedin.com/in/your-handle/"
+                target="_blank"
+                rel="noopener"
+                aria-label="LinkedIn"
+              >
+                <LinkedIn fontSize="large" />
+              </IconButton>
+            </Stack>
+
+            <Stack spacing={0.5} alignItems="center">
+              <Typography variant="body2">
+                📧 <Link href="mailto:kdnguyen9088@gmail.com">kdnguyen9088@gmail.com</Link>
+              </Typography>
+              <Typography variant="body2">
+                🖥 GitHub:{' '}
+                <Link href="https://github.com/Googlymonster" target="_blank" rel="noopener">
+                  Googlymonster
+                </Link>
+              </Typography>
+              <Typography variant="body2">
+                💼 LinkedIn:{' '}
+                <Link href="https://www.linkedin.com/in/your-handle/" target="_blank" rel="noopener">
+                  your-handle
+                </Link>
+              </Typography>
+            </Stack>
+          </CardContent>
+        </Card>
       </Box>
     </Layout>
   );
