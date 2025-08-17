@@ -51,7 +51,7 @@ export default function About() {
       {/* Profile picture */}
       <Box mt={6} display="flex" justifyContent="center">
         <Image
-          src="/profile.jpg" // put your file in /public/profile.jpg
+          src="images/profile.jpg" // put your file in /public/profile.jpg
           alt="Kevin Nguyen"
           width={200}
           height={200}
