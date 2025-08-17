@@ -108,8 +108,8 @@ export default function About() {
               </Typography>
               <Typography variant="body2">
                 💼 LinkedIn:{' '}
-                <Link href="https://www.linkedin.com/in/your-handle/" target="_blank" rel="noopener">
-                  your-handle
+                <Link href="https://www.linkedin.com/in/kevin-nguyen-34192674/" target="_blank" rel="noopener">
+                  Kevin Nguyen
                 </Link>
               </Typography>
             </Stack>
